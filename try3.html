@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 Years of Love - A Beautiful Journey</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff1a5e;
+            --secondary-color: #ff8fb1;
+            --dark-color: #1a0010;
+            --light-color: #fff;
+            --glow-color: rgba(255, 26, 94, 0.7);
+        }
+
+        
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #0a0010 0%, #1a0010 100%);
+            color: var(--light-color);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .section {
+            min-height: 100vh;
+            padding: 6rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px var(--glow-color);
+        }
+        
+        .subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+        
+        .text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .year {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 15px var(--glow-color);
+        }
+        
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            text-shadow: 0 0 10px var(--glow-color);
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .heart {
+            position: absolute;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff1a5e"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') no-repeat center center;
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+            filter: drop-shadow(0 0 5px var(--glow-color));
+            animation: float 15s linear infinite;
+        }
+        
+        .petal {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: radial-gradient(circle at 30% 30%, var(--secondary-color), var(--primary-color));
+            border-radius: 150% 0 150% 0;
+            opacity: 0.5;
+            filter: drop-shadow(0 0 5px var(--glow-color));
+            animation: float 20s linear infinite;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            opacity: 0.6;
+            filter: blur(1px);
+            box-shadow: 0 0 10px var(--glow-color);
+            animation: particleFloat 10s linear infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-1000%) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes particleFloat {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: translate(100px, -400px);
+                opacity: 0;
+            }
+        }
+        
+        .glow {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--glow-color) 0%, rgba(255,26,94,0) 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+        }
+
+        .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+/* Side-by-side wrapper */
+.side-by-side-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.image-slot.side-by-side img,
+.image-slot.full-width img {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+  border: 2px solid hotpink;
+}
+
+/* Set fixed width for side images */
+.image-slot.side-by-side {
+  flex: 1;
+  max-width: 300px;
+}
+
+/* Full image section */
+.full-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.image-slot.full-width {
+  flex: 1 1 60%;
+  max-width: 600px;
+}
+
+.text-block {
+  flex: 1 1 35%;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 1rem;
+  text-align: left;
+  max-width: 400px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .side-by-side-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .full-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-block {
+    text-align: center;
+  }
+}
+
+        .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.image-slot.side-by-side {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+/* Add this media query for mobile responsiveness */
+@media (max-width: 600px) {
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-slot.side-by-side {
+        margin-bottom: 20px;
+    }
+}
+
+.image-slot.full-width {
+    width: 100%;
+    max-width: 520px; /* 2 x 250px + 20px gap */
+    flex-shrink: 0;
+}
+
+.image-slot.full-width img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+        
+        .image-slot {
+            width: 250px;
+            height: 250px;
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            box-shadow: 0 0 20px var(--glow-color);
+            margin: 2rem auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .image-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .image-hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .poem {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            padding: 2rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 10px;
+            background: rgba(255, 26, 94, 0.1);
+            box-shadow: 0 0 15px var(--glow-color);
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+        
+        .poem-author {
+            text-align: right;
+            font-style: italic;
+            margin-top: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .send-love {
+            margin-top: 3rem;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 5px;
+            border: 1px solid var(--primary-color);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light-color);
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 0 10px rgba(255, 26, 94, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 15px var(--glow-color);
+        }
+        
+        button {
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 5px;
+            color: var(--light-color);
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0 0 15px var(--glow-color);
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px var(--glow-color);
+        }
+        
+        #hero {
+            position: relative;
+            height: 100vh;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 5;
+        }
+        
+        .hero-title {
+            font-size: 5rem;
+            font-family: 'Great Vibes', cursive;
+            color: var(--light-color);
+            text-shadow: 0 0 20px var(--glow-color);
+            margin-bottom: 1rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 2.5rem;
+            font-family: 'Dancing Script', cursive;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-text {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: var(--secondary-color);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-30px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+        }
+        
+        .heartbeat {
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(1);
+            }
+            75% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .audio-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 0 10px var(--glow-color);
+        }
+        
+        .audio-control i {
+            font-size: 1.5rem;
+            color: var(--light-color);
+        }
+
+        #rings {
+            position: relative;
+            margin: 2rem 0;
+            height: 120px;
+        }
+        
+        .ring {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 0 15px var(--glow-color);
+        }
+        
+        .ring-1 {
+            left: calc(50% - 80px);
+        }
+        
+        .ring-2 {
+            left: calc(50% - 20px);
+        }
+        
+        .dubai-skyline {
+            width: 100%;
+            max-width: 600px;
+            height: 150px;
+            margin: 2rem auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .building {
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(to top, var(--primary-color), transparent);
+            box-shadow: 0 0 10px var(--glow-color);
+        }
+        
+        .b1 {
+            width: 30px;
+            height: 100px;
+            left: 10%;
+        }
+        
+        .b2 {
+            width: 20px;
+            height: 80px;
+            left: 20%;
+        }
+        
+        .b3 {
+            width: 15px;
+            height: 120px;
+            left: 30%;
+        }
+        
+        .b4 {
+            width: 25px;
+            height: 150px;
+            left: 40%;
+        }
+        
+        .b5 {
+            width: 15px;
+            height: 90px;
+            left: 50%;
+        }
+        
+        .b6 {
+            width: 35px;
+            height: 130px;
+            left: 60%;
+        }
+        
+        .b7 {
+            width: 40px;
+            height: 140px;
+            left: 75%;
+        }
+        
+        .b8 {
+            width: 25px;
+            height: 110px;
+            left: 90%;
+        }
+        
+        .house-sketch {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            margin: 2rem auto;
+            stroke: var(--primary-color);
+            stroke-width: 2;
+            fill: none;
+        }
+        
+        .moon {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, var(--light-color) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            top: 2rem;
+            right: 10%;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            opacity: 0.8;
+        }
+        
+        .mehr-house {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 2rem auto;
+        }
+        
+        .timeline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, var(--glow-color), transparent);
+            opacity: 0.2;
+            transform: skewY(-5deg);
+        }
+        
+        .final-heart {
+            width: 200px;
+            height: 200px;
+            margin: 2rem auto;
+            position: relative;
+        }
+        
+        .heart-outer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff1a5e"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') no-repeat center center;
+            background-size: contain;
+            animation: pulse 2s infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.8rem;
+            }
+            
+            .section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .image-slot {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .final-heart {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        
+.family-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 30px var(--glow-color);
+}
+
+.family-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.8s ease;
+}
+
+.family-image-container:hover .family-image {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    padding: 2rem 1rem;
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0.8;
+    transition: all 0.5s ease;
+}
+
+.family-image-container:hover .image-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.overlay-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: var(--light-color);
+    text-shadow: 0 0 10px var(--glow-color);
+    margin-bottom: 0.5rem;
+}
+
+.overlay-subtext {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 1.8rem;
+    }
+    
+    .overlay-subtext {
+        font-size: 1.2rem;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section id="hero" class="section">
+            <div class="hero-content">
+                <h1 class="hero-title" data-aos="fade-down" data-aos-duration="1500">21 Years of Love</h1>
+                <h2 class="hero-subtitle" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">A Beautiful Journey</h2>
+                <p class="hero-text" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="600">
+                    Celebrating two decades of an unbreakable bond, countless memories, and a love that grows stronger with each passing day.
+                </p>
+            </div>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            
+            <!-- Floating elements -->
+            <div class="floating-hearts"></div>
+            <div class="glow" style="top: 30%; left: 10%;"></div>
+            <div class="glow" style="top: 50%; left: 80%;"></div>
+        </section>
+        
+        <!-- Love at First Sight Section -->
+        <section id="first-sight" class="section">
+            <span class="year" data-aos="fade-down">2003</span>
+            <div class="section-content">
+                <i class="icon fas fa-heart heartbeat" data-aos="fade-in"></i>
+                <h2 class="title" data-aos="fade-up">Love at First Sight</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"It all started with a glance… and a heartbeat."</p>
+                <p class="text" data-aos="fade-up" data-aos-delay="400">
+                    In a moment that would forever change their lives, their eyes met across the room. 
+                    A connection so deep and immediate that time seemed to stand still. 
+                    Like stars aligning in the vast universe, their souls recognized each other 
+                    at that very first glance.
+                </p>
+            </div>
+            
+            <!-- Floating elements -->
+            <div class="floating-hearts"></div>
+            <div class="glow" style="top: 30%; left: 20%;"></div>
+            <div class="glow" style="top: 60%; left: 70%;"></div>
+        </section>
+        
+        <!-- Marriage Section -->
+        <section id="marriage" class="section">
+            <span class="year" data-aos="fade-down">2004</span>
+            <div class="section-content">
+                <i class="icon fas fa-ring" data-aos="fade-in"></i>
+                <h2 class="title" data-aos="fade-up">Marriage</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"In 2004, two hearts became one — promising forever."</p>
+                
+                <div id="rings" data-aos="fade-up" data-aos-delay="400">
+                    <div class="ring ring-1" data-aos="fade-right" data-aos-delay="600"></div>
+                    <div class="ring ring-2" data-aos="fade-left" data-aos-delay="800"></div>
+                </div>
+                <p class="text" data-aos="fade-up" data-aos-delay="1000">
+                    They joined hands and hearts, promising to walk together through life's every joy and sorrow.
+                    Their vows weren't just words but sacred promises written in the stars.
+                    A commitment to love each other through every season of life.
+                </p>
+            </div>
+            
+            <!-- Floating elements -->
+            <div class="floating-hearts"></div>
+            <div class="glow" style="top: 40%; left: 15%;"></div>
+            <div class="glow" style="top: 50%; left: 75%;"></div>
+        </section>
+        
+        <!-- Prince Is Born Section (NEW) -->
+        <section id="prince-born" class="section">
+            <span class="year" data-aos="fade-down">2005</span>
+            <div class="section-content">
+                <i class="icon fas fa-baby" data-aos="fade-in"></i>
+                <h2 class="title" data-aos="fade-up">A Prince Is Born</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"Their love materialized into a precious gift — their prince."</p>
+                <div class="image-slot" data-aos="fade-up" data-aos-delay="400">
+                    <img src="prince.JPG" alt="Our Prince">
+                    <div class="image-hearts"></div>
+                </div>
+                <p class="text" data-aos="fade-up" data-aos-delay="600">
+                    In 2005, their love story took a beautiful new turn — I was born. A perfect blend of both my incredible parents, I arrived as their little prince, filling their world with a joy they never knew existed. With my first cry, everything changed — laughter became louder, love grew deeper, and their bond became unbreakable.
+                    I wasn't just their son… I became the living proof of their love, their journey, and the dreams they built together. That year, our story became a family story.
+                </p>
+            </div>
+            
+            <!-- Floating elements -->
+            <div class="floating-hearts"></div>
+            <div class="glow" style="top: 35%; left: 25%;"></div>
+            <div class="glow" style="top: 65%; left: 70%;"></div>
+        </section>
+
+        
+        <!-- Dubai Years Section -->
+        <section id="dubai" class="section">
+            <span class="year" data-aos="fade-down">2004-2009</span>
+            <div class="section-content">
+                <i class="icon fas fa-city" data-aos="fade-in"></i>
+                <h2 class="title" data-aos="fade-up">Dubai Years</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"A Journey Through the Desert Winds"</p>
+                
+                <!-- Added photo space in Dubai section -->
+                <div class="image-slot" data-aos="fade-up" data-aos-delay="300">
+                    <img src="dubai.JPG" alt="Dubai Years">
+                    <div class="image-hearts"></div>
+                </div>
+                
+                <p class="text" data-aos="fade-up" data-aos-delay="1000">
+                    After their wedding, they moved to Dubai — a city that promised dreams but brought its own share of struggles. Long hours, silent sacrifices, and restless nights marked their journey. Yet, through it all, they shielded me with love. I still remember terrace dinners under the stars and the thrill of watching airplanes overhead. In 2011, with strength and hope, we left that life behind and returned to India — ready to build the happiness they truly deserved.
+                </p>
+            </div>
+            
+            <!-- Floating elements -->
+            <div class="floating-hearts"></div>
+            <div class="glow" style="top: 30%; left: 25%;"></div>
+            <div class="glow" style="top: 60%; left: 65%;"></div>
+        </section>
+        
+        <!-- Returning to India Section -->
+        <section id="india" class="section">
+            <span class="year" data-aos="fade-down">2011</span>
+            <div class="section-content">
+                <i class="icon fas fa-plane" data-aos="fade-in"></i>
+                <h2 class="title" data-aos="fade-up">Returning to India</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"Back to India… with dreams, night shifts, weekend work — and love that never faded."</p>
+                <p class="text" data-aos="fade-up" data-aos-delay="400">
+                    Returning to their roots, they carried with them dreams bigger than before.
+                    Through long night shifts and endless weekend work, their love remained their guiding light.
+                    In each other's eyes, they found the strength to persevere through every challenge.
+                </p>
+            </div>
+            
+            <!-- Floating elements -->
+            <div class="floating-hearts"></div>
+            <div class="glow" style="top: 35%; left: 30%;"></div>
+            <div class="glow" style="top: 65%; left: 70%;"></div>
+            <div class="timeline"></div>
+        </section>
+        
+        <!-- Dream of a Home Section -->
+        <section id="dream" class="section">
+            <span class="year" data-aos="fade-down">2012-2024</span>
+            <div class="section-content">
+                <i class="icon fas fa-home" data-aos="fade-in"></i>
+                <h2 class="title" data-aos="fade-up">The Dream of a Home</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"Every fight, every tear… was for one dream — a home filled with love."</p>
+                <svg class="house-sketch" data-aos="fade-up" data-aos-delay="400" viewBox="0 0 300 200">
+                    <path d="M50,150 L150,70 L250,150" stroke-dasharray="400" stroke-dashoffset="400" style="animation: drawPath 3s forwards ease-in-out;">
+                        <animate attributeName="stroke-dashoffset" values="400;0" dur="3s" fill="freeze" begin="1s"/>
+                    </path>
+                    <path d="M70,150 L70,100 L100,100 L100,150" stroke-dasharray="200" stroke-dashoffset="200" style="animation: drawPath 2s forwards ease-in-out;">
+                        <animate attributeName="stroke-dashoffset" values="200;0" dur="2s" fill="freeze" begin="2s"/>
+                    </path>
+                    <path d="M150,150 L150,110 L190,110 L190,150" stroke-dasharray="200" stroke-dashoffset="200" style="animation: drawPath 2s forwards ease-in-out;">
+                        <animate attributeName="stroke-dashoffset" values="200;0" dur="2s" fill="freeze" begin="2.5s"/>
+                    </path>
+                    <path d="M50,150 L250,150" stroke-dasharray="200" stroke-dashoffset="200" style="animation: drawPath 2s forwards ease-in-out;">
+                        <animate attributeName="stroke-dashoffset" values="200;0" dur="1s" fill="freeze" begin="3s"/>
+                    </path>
+                </svg>
+                <p class="text" data-aos="fade-up" data-aos-delay="1000">
+                    For years, they shared a vision of a place to call their own.
+                    Through every disagreement and every challenge, that dream kept them focused.
+                    Their determination never wavered, knowing that someday they would build a sanctuary filled with love.
+                </p>
+            </div>
+            
+            <!-- Floating elements -->
+            <div class="floating-hearts"></div>
+            <div class="glow" style="top: 30%; left: 20%;"></div>
+            <div class="glow" style="top: 60%; left: 80%;"></div>
+        </section>
+        
+                 <!-- Memory Slot Section -->
+                 <section id="memory" class="section">
+                    <div class="section-content">
+                        <i class="icon fas fa-camera" data-aos="fade-in"></i>
+                        <h2 class="title" data-aos="fade-up">Beautiful Memories</h2>
+                        <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"One of their most beautiful memories…"</p>
+                        <div class="image-slot" data-aos="fade-up" data-aos-delay="400">
+                            <img src="image.png" alt="Udaipur trip 2021">
+                            <div class="image-hearts"></div>
+                        </div>
+                        <p class="text" data-aos="fade-up" data-aos-delay="600">
+                            In 2021, we created one of our most cherished memories — a full family getaway to the City of Lakes, Udaipur. Nestled in a luxurious hotel, surrounded by love, laughter, and stunning views, we lived like royalty for a while. It wasn’t just a trip; it was pure joy — together, relaxed, and truly happy. A perfect chapter in our family story.
+                        </p>
+                    </div>
+                    
+                    <!-- Floating elements -->
+                    <div class="floating-hearts"></div>
+                    <div class="glow" style="top: 40%; left: 30%;"></div>
+                    <div class="glow" style="top: 50%; left: 70%;"></div>
+                </section>
+
+
+        <!-- Memory Slot Section -->
+        <section id="memory" class="section">
+            <div class="section-content">
+                <i class="icon fas fa-camera" data-aos="fade-in"></i>
+                <h2 class="title" data-aos="fade-up">The Weight of Dreams</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"And the Struggle Continued…......"</p>
+                <div class="image-slot" data-aos="fade-up" data-aos-delay="400">
+                    <img src="memories.jpg" alt="Beautiful Memory">
+                    <div class="image-hearts"></div>
+                </div>
+                <p class="text" data-aos="fade-up" data-aos-delay="600">
+                    Even after coming back to India, life didn’t get easier. The battle shifted — from survival to building a dream. Financial stress, endless sacrifices, and the exhausting wait for our own home tested them in every way. It was one of the toughest chapters — but through every sleepless night and silent prayer, they held onto one thing: hope. The hope that someday, our dream home would stand tall, built with love, tears, and unshakable faith...
+                </p>
+            </div>
+            
+            <!-- Floating elements -->
+            <div class="floating-hearts"></div>
+            <div class="glow" style="top: 35%; left: 25%;"></div>
+            <div class="glow" style="top: 65%; left: 75%;"></div>
+        </section>
+        
+        <!-- Mehr House Section -->
+        <section id="mehr-house" class="section">
+            <span class="year" data-aos="fade-down">2024</span>
+            <div class="section-content">
+                <i class="icon fas fa-heart-circle-check" data-aos="fade-in"></i>
+                <h2 class="title" data-aos="fade-up">Mehr House</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"After much struggle, a dream fulfilled..."</p>
+                
+                <div class="image-container" data-aos="fade-up" data-aos-delay="300">
+                    <!-- Side by side images -->
+                    <div class="side-by-side-wrapper">
+                      <div class="image-slot side-by-side">
+                        <img src="house3.png" alt="Mehr House">
+                      </div>
+                      <div class="image-slot side-by-side">
+                        <img src="house.png" alt="Happy Moment">
+                      </div>
+                    </div>
+                  
+                    <!-- Big Image with text beside -->
+                    <div class="full-section">
+                      <div class="image-slot full-width">
+                        <img src="house1.png" alt="Mehr Family Together">
+                      </div>
+                      <div class="text-block">
+                        <p>
+                          Finally, after years of dedication and countless sacrifices, their dream home became a reality.  
+                          <strong>“Mehr House”</strong> — a sanctuary built on love, named with meaning, standing as a testament to their journey and resilience.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                
+                <div class="mehr-house" data-aos="fade-up" data-aos-delay="500">
+                    <svg viewBox="0 0 300 200">
+                        <path d="M50,150 L150,50 L250,150" fill="none" stroke="var(--primary-color)" stroke-width="3"/>
+                        <path d="M70,150 L70,90 L120,90 L120,150" fill="none" stroke="var(--primary-color)" stroke-width="2"/>
+                        <path d="M150,150 L150,100 L200,100 L200,150" fill="none" stroke="var(--primary-color)" stroke-width="2"/>
+                        <path d="M50,150 L250,150" fill="none" stroke="var(--primary-color)" stroke-width="3"/>
+                        <text x="110" y="130" fill="var(--secondary-color)" font-family="Dancing Script" font-size="20">Mehr House</text>
+                    </svg>
+                </div>
+                <p class="text" data-aos="fade-up" data-aos-delay="700">
+                        Years of dreams wrapped in bricks and cement...
+                        Countless nights of silent prayers, endless calculations, and held-back tears.
+
+                        Every corner of this house echoes with our journey — from laughter around a single fan to finally switching on the lights of Mehr.
+
+                        It wasn't just a house we built...
+                        It was hope, stitched together with sacrifices.
+                        It was love, tested by time and held strong by belief.
+
+                        And now, when we step in —
+                        we don’t just see walls…
+                        we see us.
+
+                        Our chaos, our comfort.
+                        Our struggle, our sanctuary.
+                        Our dream — fulfilled.
+
+                </p>
+            </div>
+            
+            <!-- Floating elements -->
+            <div class="floating-hearts"></div>
+            <div class="glow" style="top: 30%; left: 20%;"></div>
+            <div class="glow" style="top: 60%; left: 80%;"></div>
+        </section>
+
+        <!-- Family Image Section -->
+        <section id="family-image" class="section">
+            <div class="section-content">
+                <i class="icon fas fa-users" data-aos="fade-in"></i>
+                <h2 class="title" data-aos="fade-up">Our Beautiful Family</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"The greatest masterpiece we created together..."</p>
+                
+                <!-- Large family image container with overlay text -->
+                <div class="family-image-container" data-aos="fade-up" data-aos-delay="400">
+                    <img src="family.png" alt="Our Family" class="family-image">
+                    <div class="image-overlay">
+                        <h3 class="overlay-text">Together as Seven, Strong as One </h3>
+                        <p class="overlay-subtext">A family built on trust, respect, and unconditional love</p>
+                    </div>
+                </div>
+                
+                <p class="text" data-aos="fade-up" data-aos-delay="600">
+                    A beautiful family isn't just about being related. It's about being united in heart and soul,
+                    supporting each other through every season of life, and creating a legacy of love that will
+                    last for generations to come. Together, we are stronger, brighter, and infinitely blessed.
+                </p>
+            </div>
+            
+            <!-- Floating elements -->
+            <div class="floating-hearts"></div>
+            <div class="glow" style="top: 30%; left: 25%;"></div>
+            <div class="glow" style="top: 70%; left: 75%;"></div>
+        </section>
+        
+        <section id="anniversary" class="section">
+            <span class="year" data-aos="fade-down">2025</span>
+            <div class="section-content">
+                <i class="icon fas fa-glass-cheers" data-aos="fade-in"></i>
+                <h2 class="title" data-aos="fade-up">21 Years of Love</h2>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"Today, we celebrate 21 years of an extraordinary journey."</p>
+                <div class="final-heart" data-aos="fade-up" data-aos-delay="400">
+                    <div class="heart-outer"></div>
+                </div>
+                <!-- Added photo space in Mehr House section -->
+                <div class="image-slot" data-aos="fade-up" data-aos-delay="300">
+                    <img src="happy.jpg" alt="Mehr House">
+                    <div class="image-hearts"></div>
+                </div>
+                <p class="text" data-aos="fade-up" data-aos-delay="600">
+                    Twenty-one years of laughter and tears.
+                    Twenty-one years of holding hands through life's storms.
+                    Twenty-one years of growing together, dreaming together, and loving each other more with each passing day.
+                    As they stand in their dream home today, they look back at their journey with gratitude and forward to their future with hope.
+                    This is not just a celebration of the past, but a beautiful promise for all the adventures yet to come.
+                </p>
+            </div>
+
+
+                <!-- Replacing send love form with poem by princii -->
+                <div class="poem" data-aos="fade-up" data-aos-delay="600">
+                    Two decades of togetherness,<br>
+                    Through sunshine and through rain.<br>
+                    Your love has been my compass,<br>
+                    Through happiness and pain.<br><br>
+                    
+                    From Dubai's golden deserts,<br>
+                    To our Mehr House sweet and fair,<br>
+                    Every moment spent together,<br>
+                    Shows how deeply that we care.<br><br>
+                    
+                    Our prince, our greatest blessing,<br>
+                    A testament of our love so true.<br>
+                    Twenty-one years of memories,<br>
+                    And I'm still falling more in love with you.<br><br>
+                    
+                    Here's to many more adventures,<br>
+                    Many more dreams to be fulfilled.<br>
+                    Many more years of loving you,<br>
+                    With a heart that time has only thrilled.
+                    <p class="poem-author">- princii</p>
+                </div>
+                
+                <p class="text" data-aos="fade-up" data-aos-delay="800">
+                    Twenty-one years of laughter, tears, dreams, and unwavering love.
+                    Through every triumph and trial, their bond has only grown stronger.
+                    This celebration marks not just the years behind, but the beautiful journey that still lies ahead.
+                </p>
+            </div>
+            
+            <!-- Floating elements -->
+            <div class="floating-hearts"></div>
+            <div class="glow" style="top: 30%; left: 20%;"></div>
+            <div class="glow" style="top: 60%; left: 80%;"></div>
+        </section>
+    </div>
+
+    
+    <!-- Audio Control -->
+    <div class="audio-control">
+        <i class="fas fa-volume-up"></i>
+    </div>
+    
+    <audio id="background-music" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create floating elements
+            createFloatingElements();
+            
+            // Audio control
+            const audioControl = document.querySelector('.audio-control');
+            const audio = document.getElementById('background-music');
+            
+            audioControl.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play();
+                    audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
+                } else {
+                    audio.pause();
+                    audioControl.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                }
+            });
+            
+            // Smooth scroll for navigation
+            document.querySelector('.scroll-down').addEventListener('click', function() {
+                const firstSightSection = document.getElementById('first-sight');
+                firstSightSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        
+        // Create floating elements
+        function createFloatingElements() {
+            const heartsContainers = document.querySelectorAll('.floating-hearts');
+            
+            heartsContainers.forEach(container => {
+                // Create hearts
+                for (let i = 0; i < 15; i++) {
+                    createHeart(container);
+                }
+                
+                // Create petals
+                for (let i = 0; i < 10; i++) {
+                    createPetal(container);
+                }
+                
+                // Create particles
+                for (let i = 0; i < 20; i++) {
+                    createParticle(container);
+                }
+            });
+            
+            // Create hearts for images
+            const imageHearts = document.querySelectorAll('.image-hearts');
+            imageHearts.forEach(container => {
+                for (let i = 0; i < 5; i++) {
+                    createHeart(container, true);
+                }
+            });
+        }
+        
+        function createHeart(container, isImage = false) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            
+            // Random position
+            const left = Math.random() * 100;
+            const top = Math.random() * 100;
+            
+            heart.style.left = `${left}%`;
+            heart.style.top = `${top}%`;
+            
+            // Random size
+            const size = Math.random() * 15 + 10;
+            heart.style.width = `${size}px`;
+            heart.style.height = `${size}px`;
+            
+            // Random animation duration
+            const duration = Math.random() * 10 + 10;
+            heart.style.animationDuration = `${duration}s`;
+            
+            // Random delay
+            const delay = Math.random() * 10;
+            heart.style.animationDelay = `${delay}s`;
+            
+            if (isImage) {
+                heart.style.opacity = '0.3';
+                heart.style.filter = 'none';
+            }
+            
+            container.appendChild(heart);
+        }
+        
+        function createPetal(container) {
+            const petal = document.createElement('div');
+            petal.classList.add('petal');
+            
+            // Random position
+            const left = Math.random() * 100;
+            const top = Math.random() * 100;
+            
+            petal.style.left = `${left}%`;
+            petal.style.top = `${top}%`;
+            
+            // Random rotation
+            const rotation = Math.random() * 360;
+            petal.style.transform = `rotate(${rotation}deg)`;
+            
+            // Random animation duration
+            const duration = Math.random() * 15 + 15;
+            petal.style.animationDuration = `${duration}s`;
+            
+            // Random delay
+            const delay = Math.random() * 10;
+            petal.style.animationDelay = `${delay}s`;
+            
+            container.appendChild(petal);
+        }
+        
+        function createParticle(container) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            // Random position
+            const left = Math.random() * 100;
+            const top = Math.random() * 100;
+            
+            particle.style.left = `${left}%`;
+            particle.style.top = `${top}%`;
+            
+            // Random animation duration
+            const duration = Math.random() * 8 + 5;
+            particle.style.animationDuration = `${duration}s`;
+            
+            // Random delay
+            const delay = Math.random() * 5;
+            particle.style.animationDelay = `${delay}s`;
+            
+            container.appendChild(particle);
+        }
+    </script>
+</body>
+</html>
+</antArtifact>
