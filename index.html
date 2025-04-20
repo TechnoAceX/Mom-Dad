@@ -770,168 +770,6 @@
     }
 }
 
-/* General Styles */
-.section {
-    background-color: #14040e;
-    color: white;
-    padding: 60px 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.section-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-/* Title Styling */
-.title {
-    font-family: 'Brush Script MT', cursive;
-    color: #ff3377;
-    font-size: 4rem;
-    margin-bottom: 40px;
-    text-shadow: 0 0 15px rgba(255, 51, 119, 0.7);
-}
-
-.icon {
-    color: #ff3377;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    animation: pulse 2s infinite;
-}
-
-/* Card Layout */
-.thanks-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-.top-row {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.middle-row {
-    display: flex;
-    justify-content: center;
-}
-
-/* Card Styling */
-.thanks-card {
-    background-color: rgba(28, 8, 20, 0.8);
-    border-radius: 15px;
-    padding: 30px;
-    width: 100%;
-    max-width: 500px;
-    position: relative;
-    box-shadow: 0 0 20px rgba(255, 51, 119, 0.5);
-    border: 1px solid rgba(255, 51, 119, 0.3);
-    overflow: hidden;
-}
-
-.thanks-name {
-    font-family: 'Brush Script MT', cursive;
-    color: white;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.thanks-text {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.1rem;
-    line-height: 1.6;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
-.thanks-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 51, 119, 0.7), transparent);
-    margin: 20px auto;
-    width: 80%;
-}
-
-/* Creator Section */
-.created-by {
-    margin-top: 50px;
-}
-
-.created-text {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1rem;
-}
-
-.creator-name {
-    color: #ff3377;
-    font-size: 1.8rem;
-    margin: 10px 0;
-}
-
-.signature-path {
-    height: 60px;
-    margin: 10px auto;
-}
-
-/* Decorative Elements */
-.sparkles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-}
-
-.floating-hearts {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-}
-
-.glow {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 51, 119, 0.4) 0%, rgba(255, 51, 119, 0) 70%);
-    pointer-events: none;
-    filter: blur(30px);
-}
-
-/* Animations */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.7;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1100px) {
-    .top-row {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 #special-thanks {
     background: linear-gradient(135deg, rgba(10, 0, 16, 0.9) 0%, rgba(26, 0, 16, 0.9) 100%);
     position: relative;
@@ -1127,8 +965,283 @@
         padding: 1.5rem 1rem;
     }
 }
+/* Layout for the thanks rows */
+.thanks-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
 
+.thanks-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
 
+/* Red animation behind cards */
+.card-animation {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,0,0,0.2) 0%, rgba(255,0,0,0) 70%);
+    z-index: -1;
+    animation: pulse 6s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.8); opacity: 0.3; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(0.8); opacity: 0.3; }
+}
+
+.thanks-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Stylish Creator Section */
+.creator-section {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.creator-decoration {
+    height: 2px;
+    width: 100px;
+    background: linear-gradient(90deg, transparent, #ff5252, transparent);
+    position: relative;
+}
+
+.creator-decoration::before, .creator-decoration::after {
+    content: "★";
+    position: absolute;
+    color: #ff5252;
+    font-size: 18px;
+}
+
+.creator-decoration.left::after {
+    right: -10px;
+    top: -9px;
+}
+
+.creator-decoration.right::before {
+    left: -10px;
+    top: -9px;
+}
+
+.creator-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.creator-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.creator-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff5252, #ff9966);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.creator-name::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff5252, #ff9966, transparent);
+}
+/* General Styles */
+.section {
+    background-color: #14040e;
+    color: white;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Title Styling */
+.title {
+    font-family: 'Brush Script MT', cursive;
+    color: #ff3377;
+    font-size: 4rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px rgba(255, 51, 119, 0.7);
+}
+
+.icon {
+    color: #ff3377;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+/* Card Layout */
+.thanks-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.middle-row {
+    display: flex;
+    justify-content: center;
+}
+
+/* Card Styling */
+.thanks-card {
+    background-color: rgba(28, 8, 20, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 51, 119, 0.5);
+    border: 1px solid rgba(255, 51, 119, 0.3);
+    overflow: hidden;
+}
+
+.thanks-name {
+    font-family: 'Brush Script MT', cursive;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.thanks-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.thanks-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 51, 119, 0.7), transparent);
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Creator Section */
+.created-by {
+    margin-top: 50px;
+}
+
+.created-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+.creator-name {
+    color: #ff3377;
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.signature-path {
+    height: 60px;
+    margin: 10px auto;
+}
+
+/* Decorative Elements */
+.sparkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.glow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 51, 119, 0.4) 0%, rgba(255, 51, 119, 0) 70%);
+    pointer-events: none;
+    filter: blur(30px);
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1100px) {
+    .top-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
     </style>
 </head>
 <body>
@@ -1606,10 +1719,10 @@
                 <div class="top-row">
                     <div class="thanks-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="sparkles"></div>
-                        <h3 class="thanks-name" data-aos="zoom-in" data-aos-delay="600">Mrs. Sunaina Sabhani</h3>
+                        <h3 class="thanks-name" data-aos="zoom-in" data-aos-delay="600">Mr. Tushar Sabhani</h3>
                         <p class="thanks-text" data-aos="fade-up" data-aos-delay="900">
-                            With deepest gratitude for your unwavering support, love, and guidance through our journey.
-                            Your presence has brightened our path and filled our hearts with joy.
+                            With heartfelt appreciation for your endless encouragement, wisdom, and support.
+                            Your dedication and kindness have made a profound impact on our journey.
                         </p>
                         <div class="thanks-divider" data-aos="width" data-aos-delay="700"></div>
                     </div>
@@ -1629,10 +1742,11 @@
                 <div class="middle-row">
                     <div class="thanks-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="sparkles"></div>
-                        <h3 class="thanks-name" data-aos="zoom-in" data-aos-delay="600">Mrs. Sunaina Sabhani</h3>
+                        <h3 class="thanks-name" data-aos="zoom-in" data-aos-delay="600">Maa & Soumya</h3>
                         <p class="thanks-text" data-aos="fade-up" data-aos-delay="900">
-                            With deepest gratitude for your unwavering support, love, and guidance through our journey.
-                            Your presence has brightened our path and filled our hearts with joy.
+                        From our eldest, Maa, with her infinite wisdom, to our youngest, Soumya, with her boundless spirit – 
+                        thank you both for your love, patience, and the special light you bring to our lives.
+                        Your unwavering belief in us has made all the difference.
                         </p>
                         <div class="thanks-divider" data-aos="width" data-aos-delay="700"></div>
                     </div>
