@@ -476,25 +476,47 @@
         }
         
         .audio-control {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 100;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: 0 0 10px var(--glow-color);
-        }
-        
-        .audio-control i {
-            font-size: 1.5rem;
-            color: var(--light-color);
-        }
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--glow-color);
+    /* Add these lines for better responsiveness */
+    transition: all 0.3s ease;
+    touch-action: manipulation;
+}
+
+/* Add media queries for different screen sizes */
+@media (max-width: 768px) {
+    .audio-control {
+        width: 60px;
+        height: 60px;
+        bottom: 30px;
+        right: 30px;
+    }
+    
+    .audio-control i {
+        font-size: 1.8rem;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .audio-control {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
 
         #rings {
             position: relative;
@@ -734,6 +756,202 @@
     }
 }
 
+#special-thanks {
+    background: linear-gradient(135deg, rgba(10, 0, 16, 0.9) 0%, rgba(26, 0, 16, 0.9) 100%);
+    position: relative;
+}
+
+.thanks-container {
+    margin: 2rem auto;
+    max-width: 800px;
+    position: relative;
+}
+
+.thanks-card {
+    background: rgba(255, 26, 94, 0.1);
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px var(--glow-color);
+    transition: all 0.5s ease;
+}
+
+.thanks-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px var(--glow-color);
+}
+
+.sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sparkles::before, .sparkles::after {
+    content: "";
+    position: absolute;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffb8d2"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg>');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
+.sparkles::before {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0.5s;
+}
+
+.sparkles::after {
+    top: 15%;
+    right: 15%;
+    animation-delay: 1.5s;
+}
+
+.thanks-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: var(--light-color);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 15px var(--glow-color);
+    position: relative;
+    z-index: 2;
+}
+
+.thanks-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    position: relative;
+    z-index: 2;
+}
+
+.thanks-divider {
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+    margin: 2rem auto;
+    position: relative;
+    z-index: 2;
+    animation: growWidth 2s forwards ease-in-out;
+    animation-delay: 2s;
+}
+
+@keyframes growWidth {
+    0% { width: 0; }
+    100% { width: 50%; }
+}
+
+.created-by {
+    margin-top: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.created-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: var(--light-color);
+    margin-bottom: 0.5rem;
+}
+
+.creator-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px var(--glow-color);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.creator-name::after {
+    content: "❤";
+    position: absolute;
+    font-size: 1.5rem;
+    top: -10px;
+    right: -20px;
+    color: var(--primary-color);
+    animation: pulse 2s infinite;
+}
+
+.creator-signature {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.signature-path {
+    width: 100%;
+    height: 100%;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+}
+
+/* Add animation for AOS library to use */
+[data-aos="width"] {
+    width: 0;
+    transition-property: width;
+}
+
+[data-aos="width"].aos-animate {
+    width: 50%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .thanks-name {
+        font-size: 2.5rem;
+    }
+    
+    .thanks-text {
+        font-size: 1.3rem;
+    }
+    
+    .creator-name {
+        font-size: 2.8rem;
+    }
+    
+    .thanks-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .thanks-name {
+        font-size: 2.2rem;
+    }
+    
+    .thanks-text {
+        font-size: 1.1rem;
+    }
+    
+    .creator-name {
+        font-size: 2.5rem;
+    }
+    
+    .thanks-card {
+        padding: 1.5rem 1rem;
+    }
+}
+
 
     </style>
 </head>
@@ -795,6 +1013,17 @@
                     <div class="ring ring-1" data-aos="fade-right" data-aos-delay="600"></div>
                     <div class="ring ring-2" data-aos="fade-left" data-aos-delay="800"></div>
                 </div>
+
+                <div class="side-by-side-wrapper">
+                    <div class="image-slot side-by-side" style="width: 250px; height: 200px; overflow: hidden;">
+                    <img src="marriage1.jpg" alt="Udaipur Memory 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div class="image-slot side-by-side" style="width: 250px; height: 200px; overflow: hidden;">
+                    <img src="marriage2.jpg" alt="Udaipur Memory 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                </div>
+
+
                 <p class="text" data-aos="fade-up" data-aos-delay="1000">
                     They joined hands and hearts, promising to walk together through life's every joy and sorrow.
                     Their vows weren't just words but sacred promises written in the stars.
@@ -1191,6 +1420,43 @@
         </section>
     </div>
 
+    <section id="special-thanks" class="section">
+        <div class="section-content">
+            <i class="icon fas fa-award heartbeat" data-aos="fade-in"></i>
+            <h2 class="title" data-aos="fade-up">Special Thanks</h2>
+            
+            <div class="thanks-container" data-aos="fade-up" data-aos-delay="300">
+                <div class="thanks-card">
+                    <div class="sparkles"></div>
+                    <h3 class="thanks-name" data-aos="zoom-in" data-aos-delay="600">Mrs. Sunaina Sabhani</h3>
+                    <p class="thanks-text" data-aos="fade-up" data-aos-delay="900">
+                        With deepest gratitude for your unwavering support, love, and guidance through our journey.
+                        Your presence has brightened our path and filled our hearts with joy.
+                    </p>
+                    <div class="thanks-divider" data-aos="width" data-aos-delay="700"></div>
+                </div>
+            </div>
+            
+            <div class="created-by" data-aos="fade-up" data-aos-delay="1200">
+                <p class="created-text">Created with Love by</p>
+                <h3 class="creator-name" data-aos="fade-up" data-aos-delay="1500">Princii</h3>
+                <div class="creator-signature">
+                    <svg class="signature-path" viewBox="0 0 300 100">
+                        <path d="M50,50 C70,20 120,20 150,50 C180,80 220,80 250,50" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round">
+                            <animate attributeName="stroke-dasharray" from="300 300" to="300 0" dur="3s" begin="1s" fill="freeze" />
+                            <animate attributeName="stroke-dashoffset" from="300" to="0" dur="3s" begin="1s" fill="freeze" />
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating elements -->
+        <div class="floating-hearts"></div>
+        <div class="glow" style="top: 40%; left: 25%;"></div>
+        <div class="glow" style="top: 60%; left: 75%;"></div>
+    </section>
+
     
     <!-- Audio Control -->
     <div class="audio-control">
@@ -1213,21 +1479,33 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Create floating elements
             createFloatingElements();
-            
-            // Audio control
+           // Audio control with improved touch support
             const audioControl = document.querySelector('.audio-control');
             const audio = document.getElementById('background-music');
-            
-            audioControl.addEventListener('click', function() {
+
+            // Function to toggle audio
+            function toggleAudio(e) {
+                e.preventDefault(); // Prevent default behavior
                 if (audio.paused) {
-                    audio.play();
-                    audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
+                    const playPromise = audio.play();
+                    if (playPromise !== undefined) {
+                        playPromise.then(_ => {
+                            audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
+                        })
+                        .catch(error => {
+                            console.log('Audio playback was prevented: ', error);
+                        });
+                    }
                 } else {
                     audio.pause();
                     audioControl.innerHTML = '<i class="fas fa-volume-mute"></i>';
                 }
-            });
-            
+            }
+
+            // Add multiple event listeners
+            audioControl.addEventListener('click', toggleAudio);
+            audioControl.addEventListener('touchstart', toggleAudio, {passive: false});
+                        
             // Smooth scroll for navigation
             document.querySelector('.scroll-down').addEventListener('click', function() {
                 const firstSightSection = document.getElementById('first-sight');
@@ -1344,6 +1622,31 @@
             
             container.appendChild(particle);
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+    // Create sparkles for the thanks card
+    const sparklesContainer = document.querySelector('.sparkles');
+    if (sparklesContainer) {
+        for (let i = 0; i < 12; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            
+            // Random position
+            sparkle.style.top = `${Math.random() * 100}%`;
+            sparkle.style.left = `${Math.random() * 100}%`;
+            
+            // Random size
+            const size = Math.random() * 10 + 5;
+            sparkle.style.width = `${size}px`;
+            sparkle.style.height = `${size}px`;
+            
+            // Random delay
+            sparkle.style.animationDelay = `${Math.random() * 3}s`;
+            
+            sparklesContainer.appendChild(sparkle);
+        }
+    }
+});
     </script>
 </body>
 </html>
