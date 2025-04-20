@@ -7,6 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
         :root {
             --primary-color: #ff1a5e;
@@ -479,45 +480,49 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 100;
+    z-index: 9999; /* Increased z-index to ensure it's on top */
     background: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px; /* Slightly smaller for better mobile display */
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 0 10px var(--glow-color);
-    /* Add these lines for better responsiveness */
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.7); /* Using a direct color value instead of var */
     transition: all 0.3s ease;
     touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent; /* Removes tap highlight on mobile */
+    pointer-events: auto; /* Ensures the button captures clicks/touches */
+    user-select: none; /* Prevents text selection */
 }
 
-/* Add media queries for different screen sizes */
+.audio-control i {
+    font-size: 1.2rem; /* Explicit font size for the icon */
+    color: white;
+}
+
+/* For mobile devices */
 @media (max-width: 768px) {
     .audio-control {
-        width: 60px;
-        height: 60px;
-        bottom: 30px;
-        right: 30px;
-    }
-    
-    .audio-control i {
-        font-size: 1.8rem;
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        /* Make sure it's within the viewport */
+        transform: translate(0, 0); 
     }
 }
 
 /* For very small screens */
 @media (max-width: 480px) {
     .audio-control {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 10px;
     }
 }
-
         #rings {
             position: relative;
             margin: 2rem 0;
@@ -1460,13 +1465,10 @@
     
     <!-- Audio Control -->
     <div class="audio-control">
-        <i class="fas fa-volume-up"></i>
+        <i class="fas fa-volume-mute"></i>
     </div>
-    
-    <audio id="background-music" loop>
-        <source src="song.mp3" type="audio/mpeg">
-    </audio>
-    
+    <audio id="background-music" loop src="song.mp3"></audio>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         // Initialize AOS animation
