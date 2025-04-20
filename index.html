@@ -932,6 +932,34 @@
     }
 }
 
+#special-thanks {
+    background: linear-gradient(135deg, rgba(10, 0, 16, 0.9) 0%, rgba(26, 0, 16, 0.9) 100%);
+    position: relative;
+}
+
+.thanks-container {
+    margin: 2rem auto;
+    max-width: 800px;
+    position: relative;
+}
+
+.thanks-card {
+    background: rgba(255, 26, 94, 0.1);
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px var(--glow-color);
+    transition: all 0.5s ease;
+}
+
+.thanks-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px var(--glow-color);
+}
+
 .sparkles {
     position: absolute;
     top: 0;
@@ -1061,6 +1089,43 @@
 
 [data-aos="width"].aos-animate {
     width: 50%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .thanks-name {
+        font-size: 2.5rem;
+    }
+    
+    .thanks-text {
+        font-size: 1.3rem;
+    }
+    
+    .creator-name {
+        font-size: 2.8rem;
+    }
+    
+    .thanks-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .thanks-name {
+        font-size: 2.2rem;
+    }
+    
+    .thanks-text {
+        font-size: 1.1rem;
+    }
+    
+    .creator-name {
+        font-size: 2.5rem;
+    }
+    
+    .thanks-card {
+        padding: 1.5rem 1rem;
+    }
 }
 
 
