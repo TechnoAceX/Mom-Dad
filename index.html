@@ -707,6 +707,13 @@
             }
         }
         
+        @media (max-width: 768px) {
+    .image-item {
+        width: 90% !important;
+        height: 250px !important;
+        margin: 0 auto;
+    }
+}
 
 .family-image-container {
     position: relative;
@@ -1244,24 +1251,28 @@
         <h2 class="title" data-aos="fade-up">Returning to India</h2>
         <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"Back to India… with dreams, night shifts, weekend work — and love that never faded."</p>
         
-         <!-- Image container with larger images -->
-         <div style="display: flex; justify-content: center; gap: 0.5rem; margin: 2rem auto;">
-            <div class="image-slot" style="width: 350px; height: 280px; overflow: hidden;">
-                <img src="india.png" alt="Udaipur Memory 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-            </div>
-            <div class="image-slot" style="width: 350px; height: 280px; overflow: hidden;">
-                <img src="india1.png" alt="Udaipur Memory 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+        <!-- Responsive image container with larger images and red border effect -->
+        <div class="image-gallery" style="display: flex; justify-content: center; margin: 2rem auto; width: 100%;">
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 100%;">
+                <div class="image-item" style="width: 380px; height: 300px; overflow: hidden; border: 4px solid #d92d4a; border-radius: 12px; box-shadow: 0 0 15px rgba(255, 107, 107, 0.6); transition: box-shadow 0.3s ease, transform 0.3s ease;" onmouseover="this.style.boxShadow='0 0 25px rgba(255, 0, 0, 0.9), 0 0 40px rgba(255, 0, 0, 0.6)'; this.style.transform='scale(1.02)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 107, 0.6)'; this.style.transform='scale(1)';">
+                    <img src="india.png" alt="Udaipur Memory 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                </div>
+                <div class="image-item" style="width: 380px; height: 300px; overflow: hidden; border: 4px solid #d92d4a; border-radius: 12px; box-shadow: 0 0 15px rgba(255, 107, 107, 0.6); transition: box-shadow 0.3s ease, transform 0.3s ease;" onmouseover="this.style.boxShadow='0 0 25px rgba(255, 0, 0, 0.9), 0 0 40px rgba(255, 0, 0, 0.6)'; this.style.transform='scale(1.02)';" onmouseout="this.style.boxShadow='0 0 15px rgba(255, 107, 107, 0.6)'; this.style.transform='scale(1)';">
+                    <img src="india1.png" alt="Udaipur Memory 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                </div>
             </div>
         </div>
         
+        
         <!-- Centered text below images -->
-        <p class="text" data-aos="fade-up" data-aos-delay="400" style="text-align: center; max-width: 800px; margin: 1rem auto;">
+        <p class="text" data-aos="fade-up" data-aos-delay="400" style="text-align: center; max-width: 800px; margin: 1rem auto; padding: 0 1rem;">
             Returning to their roots, they carried with them dreams bigger than before.
             Through long night shifts and endless weekend work, their love remained their guiding light.
             In each other's eyes, they found the strength to persevere through every challenge.
         </p>
     </div>
-            
+
+    
             <!-- Floating elements -->
             <div class="floating-hearts"></div>
             <div class="glow" style="top: 35%; left: 30%;"></div>
