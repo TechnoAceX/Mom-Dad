@@ -266,7 +266,7 @@
         </section>
 
 
-        <!-- Bikaner Trip Section with Mixed Photo Layout -->
+            <!-- Bikaner Trip Section with Special Treatment for Horizontal Image -->
         <section id="bikaner" class="section">
             <span class="year" data-aos="fade-down">2022</span>
             <div class="section-content">
@@ -274,78 +274,111 @@
                 <h2 class="title" data-aos="fade-up">Magical Memories in Bikaner</h2>
                 <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"A Royal Desert Retreat That Captured Our Hearts"</p>
                 
-            <!-- Photo gallery with large image above and two small below -->
-        <div class="mixed-gallery" data-aos="fade-up" data-aos-delay="300" style="width: 100%; max-width: 750px; margin: 2rem auto;">
-            <!-- Large photo on top -->
-            <div style="margin-bottom: 15px;">
-                <div class="image-slot" style="width: 100%; height: 350px; border-radius: 10px; overflow: hidden; border: 2px solid var(--primary-color); box-shadow: 0 0 15px var(--glow-color);">
-                    <img src="bikaner4.png" alt="Bikaner Large" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div class="image-hearts"></div>
+                <!-- Photo gallery with optimized horizontal image -->
+                <div class="bikaner-gallery-opt" data-aos="fade-up" data-aos-delay="300">
+                    <!-- Horizontal image on top - shorter height but full width -->
+                    <div class="horizontal-photo-opt">
+                        <img src="bikaner4.png" alt="Bikaner Large">
+                        <div class="image-hearts"></div>
+                    </div>
+                    
+                    <!-- Three vertical images -->
+                    <div class="vertical-photos-opt">
+                        <div class="vertical-photo-opt">
+                            <img src="bikaner1.png" alt="Bikaner Small 1">
+                            <div class="image-hearts"></div>
+                        </div>
+                        
+                        <div class="vertical-photo-opt">
+                            <img src="bikaner3.png" alt="Bikaner Small 2">
+                            <div class="image-hearts"></div>
+                        </div>
+                        
+                        <div class="vertical-photo-opt">
+                            <img src="bikaner2.png" alt="Bikaner Small 3">
+                            <div class="image-hearts"></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-        <!-- Three smaller images side by side with increased height -->
-        <div style="display: flex; justify-content: space-between; gap: 10px;">
-            <!-- First small image with increased height -->
-            <div class="image-slot" style="width: calc(33.33% - 7px); height: 400px; border-radius: 10px; overflow: hidden; border: 2px solid var(--primary-color); box-shadow: 0 0 15px var(--glow-color);">
-                <img src="bikaner1.png" alt="Bikaner Small 1" style="width: 100%; height: 100%; object-fit: cover;">
-                <div class="image-hearts"></div>
-            </div>
-            
-            <!-- Second small image with increased height -->
-            <div class="image-slot" style="width: calc(33.33% - 7px); height: 400px; border-radius: 10px; overflow: hidden; border: 2px solid var(--primary-color); box-shadow: 0 0 15px var(--glow-color);">
-                <img src="bikaner3.png" alt="Bikaner Small 2" style="width: 100%; height: 100%; object-fit: cover;">
-                <div class="image-hearts"></div>
-            </div>
-            
-            <!-- Third small image with increased height -->
-            <div class="image-slot" style="width: calc(33.33% - 7px); height: 400px; border-radius: 10px; overflow: hidden; border: 2px solid var(--primary-color); box-shadow: 0 0 15px var(--glow-color);">
-                <img src="bikaner2.png" alt="Bikaner Small 3" style="width: 100%; height: 100%; object-fit: cover;">
-                <div class="image-hearts"></div>
-            </div>
-        </div>
 
-        <!-- Responsive design CSS -->
-        <style>
-            @media (max-width: 600px) {
-                .mixed-gallery > div:last-child {
-                    flex-direction: column;
-                }
-                
-                .mixed-gallery > div:last-child .image-slot {
-                    width: 100% !important;
-                    margin-bottom: 15px;
-                }
-            }
-        </style>
-        
-        <!-- Responsive design CSS -->
-        <style>
-            @media (max-width: 600px) {
-                .mixed-gallery > div:first-child {
-                    flex-direction: column;
-                    align-items: center;
-                }
-                
-                .mixed-gallery .image-slot {
-                    width: 90% !important;
-                    margin-bottom: 15px;
-                }
-            }
-        </style>
+                <p class="text" data-aos="fade-up" data-aos-delay="600">
+                    In 2022, we escaped to Bikaner, a gem of Rajasthan's desert. Amid grand havelis and golden dunes, we created memories wandering ancient palaces, savoring Rajasthani cuisine, and watching sunsets light up the sky. A camel safari under the vast stars reminded us that adventure still binds our hearts. This trip was more than a getaway—it was a celebration of our enduring love.
+                </p>
+            </div>
             
-            <p class="text" data-aos="fade-up" data-aos-delay="600">
-                In 2022, we escaped to Bikaner, a gem of Rajasthan's desert. Amid grand havelis and golden dunes, we created memories wandering ancient palaces, savoring Rajasthani cuisine, and watching sunsets light up the sky. A camel safari under the vast stars reminded us that adventure still binds our hearts. This trip was more than a getaway—it was a celebration of our enduring love.
-            </p>
-            
-        </div>
-        
-        <!-- Floating elements -->
-        <div class="floating-hearts"></div>
-        <div class="glow" style="top: 40%; left: 30%;"></div>
-        <div class="glow" style="top: 50%; left: 70%;"></div>
-    </section>
+            <!-- Floating elements -->
+            <div class="floating-hearts"></div>
+            <div class="glow" style="top: 40%; left: 30%;"></div>
+            <div class="glow" style="top: 50%; left: 70%;"></div>
+        </section>
 
+        <!-- CSS with optimized horizontal image handling -->
+        <style>
+        /* Gallery container */
+        .bikaner-gallery-opt {
+            width: 95% !important;
+            max-width: 750px !important;
+            margin: 2rem auto !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Horizontal photo styling - shorter height but full width on mobile */
+        .horizontal-photo-opt {
+            width: 100% !important;
+            margin-bottom: 15px !important;
+            border-radius: 10px !important;
+            overflow: hidden !important;
+            border: 2px solid var(--primary-color) !important;
+            box-shadow: 0 0 15px var(--glow-color) !important;
+            height: 230px !important; /* Shorter height for horizontal image */
+        }
+
+        /* Vertical photos container - stacked on mobile */
+        .vertical-photos-opt {
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 15px !important;
+        }
+
+        /* Vertical photo styling - extra tall on mobile */
+        .vertical-photo-opt {
+            width: 100% !important;
+            height: 500px !important; /* Tall height for vertical images */
+            border-radius: 10px !important;
+            overflow: hidden !important;
+            border: 2px solid var(--primary-color) !important;
+            box-shadow: 0 0 15px var(--glow-color) !important;
+        }
+
+        /* All images should fill their containers */
+        .bikaner-gallery-opt img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .bikaner-gallery-opt {
+                width: 100% !important;
+            }
+            
+            .horizontal-photo-opt {
+                height: 350px !important; /* Original desktop height */
+            }
+            
+            .vertical-photos-opt {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+            }
+            
+            .vertical-photo-opt {
+                width: calc(33.33% - 7px) !important;
+                height: 400px !important; /* Original desktop height */
+            }
+        }
+        </style>
 
                 <!-- Rabbits Section -->
         <section id="rabbits" class="section">
@@ -452,38 +485,95 @@
             <div class="glow" style="top: 60%; left: 80%;"></div>
         </section>
 
-
-        <!-- New Car Section -->
-        <section id="dream-car" class="section">
-            <span class="year" data-aos="fade-down">2025</span>
-            <div class="section-content">
-                <i class="icon fas fa-car" data-aos="fade-in"></i>
-                <h2 class="title" data-aos="fade-up">Our Dream Wheels</h2>
-                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"The next chapter of our journey — Mahindra BE 6"</p>
-                
-                <div class="image-slot" data-aos="fade-up" data-aos-delay="400" style="width: 350px; height: 250px;">
-                    <!-- Replace with your Mahindra BE 6 image when available -->
-                    <img src="image.png" alt="Mahindra BE 6" style="width: 100%; height: 100%; object-fit: cover;">
-                    <div class="image-hearts"></div>
-                </div>
-                
-                <p class="text" data-aos="fade-up" data-aos-delay="600">
-                    Every family story has a chapter about the perfect car — and ours is about to begin with the stunning Mahindra BE 6. More than just a vehicle, it represents our family's next adventure together. The anticipation grows with each passing day as we prepare to welcome this beauty into our lives. Soon, we'll create countless memories on new roads, with new horizons, but the same love that has carried us through 21 beautiful years.
-                </p>
-            </div>
-            
-            <!-- Floating elements -->
-            <div class="floating-hearts"></div>
-            <div class="glow" style="top: 30%; left: 25%;"></div>
-            <div class="glow" style="top: 60%; left: 70%;"></div>
-        </section>
-            
+<!-- New Car Section -->
+<section id="dream-car" class="section">
+    <span class="year" data-aos="fade-down">2025</span>
+    <div class="section-content">
+        <i class="icon fas fa-car" data-aos="fade-in"></i>
+        <h2 class="title" data-aos="fade-up">Our Dream Wheels</h2>
+        <p class="subtitle" data-aos="fade-up" data-aos-delay="200">"The next chapter of our journey — Mahindra BE 6"</p>
+        
+        <div class="image-slot" data-aos="fade-up" data-aos-delay="400" style="width: 350px; height: 250px;">
+            <!-- Replace with your Mahindra BE 6 image when available -->
+            <img src="image.png" alt="Mahindra BE 6" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="image-hearts"></div>
+        </div>
+        
+        <p class="text" data-aos="fade-up" data-aos-delay="600">
+            Every family story has a chapter about the perfect car — and ours is about to begin with the stunning Mahindra BE 6. More than just a vehicle, it represents our family's next adventure together. The anticipation grows with each passing day as we prepare to welcome this beauty into our lives. Soon, we'll create countless memories on new roads, with new horizons, but the same love that has carried us through 21 beautiful years.
+        </p>
+    </div>
+    
     <!-- Floating elements -->
     <div class="floating-hearts"></div>
     <div class="glow" style="top: 30%; left: 25%;"></div>
     <div class="glow" style="top: 60%; left: 70%;"></div>
 </section>
 
+<style>
+/* Responsive styles - mobile-first approach */
+@media only screen and (max-width: 768px) {
+    #dream-car .section-content {
+        padding: 0 15px;
+    }
+    
+    #dream-car .year {
+        font-size: 2.5rem;
+    }
+    
+    #dream-car .title {
+        font-size: 1.8rem;
+    }
+    
+    #dream-car .subtitle {
+        font-size: 1rem;
+    }
+    
+    #dream-car .image-slot {
+        width: 90% !important;
+        max-width: 350px;
+        height: auto !important;
+        margin: 0 auto 20px;
+    }
+    
+    #dream-car .image-slot img {
+        height: auto !important;
+        min-height: 200px;
+    }
+    
+    #dream-car .text {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+    
+    #dream-car .glow {
+        transform: scale(0.7);
+    }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 480px) {
+    #dream-car .year {
+        font-size: 2rem;
+    }
+    
+    #dream-car .title {
+        font-size: 1.5rem;
+    }
+    
+    #dream-car .icon {
+        font-size: 1.5rem;
+    }
+    
+    #dream-car .image-slot {
+        width: 95% !important;
+    }
+    
+    #dream-car .text {
+        font-size: 0.9rem;
+    }
+}
+</style>
 
         <!-- Family Image Section -->
         <section id="family-image" class="section">
