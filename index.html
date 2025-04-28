@@ -391,6 +391,18 @@
             object-fit: cover !important;
         }
 
+        /* Add this specific rule to your existing CSS */
+.horizontal-photo-opt img {
+    object-position: right center !important; /* This will crop from left, keeping right side visible */
+}
+
+/* And reset it for desktop if needed */
+@media (min-width: 768px) {
+    .horizontal-photo-opt img {
+        object-position: center !important; /* Center the image on desktop */
+    }
+}
+
         /* Desktop styles */
         @media (min-width: 768px) {
             .bikaner-gallery-opt {
